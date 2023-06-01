@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Chat - Socket.io</title>
+  </head>
+  <body>
+    <div class="app" >
+      <div class="screen join-screen active">
+        <div class="form">
+          <h2>Bem vindo(a) ao Chat!</h2>
+
+          <div  class="container">
+            <label for="style1">Escolha sua cor</label>
+            <input type="color" value="#43da86" id="corInput" />
+          </div>
+          
+          <div class="container-img-input">
+           <br> <hr><br>
+            <label tabindex="0" for="imgUsuario" class="picture">
+              <span class="picture_img"></span>
+            </label>
+            <input type="file" id="imgUsuario" accept="image/*" />
+            
+          </div>
+          <div class="form-input">
+            <input type="text" id="username" placeholder="Nome de usuário"/>
+          </div>
+          <div  class="form-input">
+            <button id="join-user">Acessar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="screen chat-screen ">
+        <div class="header">
+          <div class="logo"></div>
+          <button id="exit-chat"><i class="fa fa-sign-out"></i></button>
+        </div>
+        <div class="messages">
+          
+        </div>
+        <div class="typebox" >
+          <input type="text" id="message-input" />
+          <button id="send-message" style="color: aliceblue;">
+            <i class="fa fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="codigo.js"></script>
+
+  
+</html>
