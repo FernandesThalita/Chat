@@ -9,10 +9,10 @@ app.use(express.static(path.join(__dirname + "/public")));
 
 io.on("connection", function (socket) {
   socket.on("newuser", function (username) {
-    socket.broadcast.emit("uptade", username + "entrou no grupo");
+    socket.broadcast.emit("uptade", username + " entrou no grupo");
   });
   socket.on("exituser", function (username) {
-    socket.broadcast.emit("uptade", username + "deixou o grupo");
+    socket.broadcast.emit("uptade", username + " deixou o grupo");
   });
   socket.on("chat", function (message) {
     socket.broadcast.emit("chat", message);
