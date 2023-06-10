@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body {
+main{
   background: #e6e5e5; /* Fallback */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   height: 100vh;
